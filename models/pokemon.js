@@ -27,7 +27,8 @@ module.exports = (sequelize, DataTypes) => {
     height: DataTypes.FLOAT,
     moves: DataTypes.ARRAY(DataTypes.STRING),
     description: DataTypes.TEXT,
-    base: DataTypes.JSON
+    base: DataTypes.JSON,
+    userID: DataType.BIGINT
   }, {
     sequelize,
     modelName: 'Pokemon',

@@ -36,6 +36,10 @@ module.exports = {
       base: {
         type: Sequelize.JSON
       },
+      userID:{
+        allowNull: true,
+        type: Sequelize.BIGINT
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
