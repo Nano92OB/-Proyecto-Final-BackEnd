@@ -45,7 +45,28 @@ const pokemons = [{
             "Spd": 65,
             "Speed": 45
         }
-    }]
+    },
+    {
+        "id": 3,
+        "img": "./images/charmander.png",
+        "name": "Charmander",
+        "weight": 8.5,
+        "height": 0.6,
+        "moves": ["Mega-Punch", "Fire-Punch"],
+        "description": "It has a preference for hot things. When it rains, steam is sold to spout from the tip of its tail.",
+        "type": [
+            "Fire"
+        ],
+        "base": {
+            "HP": 45,
+            "Attack": 49,
+            "Defense": 49,
+            "Spa": 65,
+            "Spd": 65,
+            "Speed": 45
+        }
+    }
+]
 
 router.get('/getPokemons', (req,res)=>{
     res.status(200).send(pokemons)
