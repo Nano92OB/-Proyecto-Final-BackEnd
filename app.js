@@ -4,7 +4,8 @@ const cors = require('cors')
 const port = 8080
 const app = express();
 const pokemons = require('./controllers/pokemon.controller')
-const login = require('./controllers/login')
+const login = require('./controllers/login.controller');
+const {verifyToken} = require('./middlewares/tokenValidation');
 
 app.use(cors())
 app.use(express.json())
@@ -12,7 +13,7 @@ app.use(express.json())
 
 app.use('/auth',login)
 
-app.use('/pokedex', pokemons)
+app.use('/pokedex',verifyToken,pokemons)
 
 
 app.listen(port, () => {
