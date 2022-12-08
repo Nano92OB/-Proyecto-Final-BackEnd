@@ -4,11 +4,13 @@ const cors = require('cors')
 const port = 8080
 const app = express();
 const pokemons = require('./controllers/pokemon.controller')
+const login = require('./controllers/login')
 
 app.use(cors())
 app.use(express.json())
 
 
+app.use('/auth',login)
 
 app.use('/pokedex', pokemons)
 
