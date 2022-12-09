@@ -13,7 +13,7 @@ app.use(express.json())
 
 app.use('/auth',login)
 
-app.use('/pokedex',verifyToken,pokemons)
+app.use('/pokedex',pokemons)
 
 
 app.listen(port, () => {
