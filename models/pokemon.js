@@ -28,7 +28,6 @@ module.exports = (sequelize, DataTypes) => {
     moves: DataTypes.ARRAY(DataTypes.STRING),
     description: DataTypes.TEXT,
     base: DataTypes.JSON,
-    userID: DataTypes.BIGINT,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
   }, {

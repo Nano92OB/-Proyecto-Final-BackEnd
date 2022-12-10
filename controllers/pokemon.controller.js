@@ -9,7 +9,14 @@ const jwt = require('jsonwebtoken')
 
 router.get('/getPokemons', async(req,res)=>{
     const pok = db.Pokemon
-    await pok.findAll()
+    const token = req.header('Authentication')
+    await pok.findAll(
+        {
+            where:{
+                userId: token.userId
+            }
+        }
+    )
     .then(data=>{
         res.send(data)
     }).catch(error=>{
