@@ -3,26 +3,35 @@ const express = require('express');
 const {DataTypes, Sequelize} = require('sequelize');
 const router = express.Router();
 const db = require('../models/index');
-const jwt = require('jsonwebtoken')
+const jwt = require('jsonwebtoken');
+
+
 
 
 
 router.get('/getPokemons', async(req,res)=>{
     const pok = db.Pokemon
     const token = req.header('Authentication')
-    await pok.findAll(
-        {
-            where:{
-                userId: token.userId
-            }
-        }
-    )
-    .then(data=>{
-        res.send(data)
-    }).catch(error=>{
-        res.status(500).send({message:error.message})
-    })
+    if(!token){
+        await pok.findAll()
+        .then(data=>{
+            res.send(data)
+        }).catch(error=>{
+            res.status(500).send({message:error.message})
+        })
+    }else{
+        await pok.findAll({
+            where : {userId:jwt.verify(token, process.env.TOKEN_SECRET)}
+        })
+        .then(data=>{
+            res.send(data)
+        }).catch(error=>
+            res.status(500).send({message:error.message})
+        )}
+        
 })
+
+
 
 
 
