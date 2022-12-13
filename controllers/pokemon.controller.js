@@ -9,7 +9,8 @@ const jwt = require('jsonwebtoken');
 router.get('/getPokemons', async(req,res)=>{
     const pok = db.Pokemon
     const token = req.header('Authentication')
-    if(!token){
+    console.log(token)
+    if(token == null){
         await pok.findAll({
             where: {
                 creatorId: null
