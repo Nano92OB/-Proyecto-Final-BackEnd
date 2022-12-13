@@ -12,7 +12,6 @@ app.use(express.json())
 
 
 app.use('/auth',login)
-
 app.use('/pokedex',pokemons)
 
 
