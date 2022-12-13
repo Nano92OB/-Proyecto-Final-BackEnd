@@ -5,18 +5,15 @@ module.exports = {
     await queryInterface.createTable('Pokemons', {
       id: {
         allowNull: false,
-        autoIncrement: true,
+        type: Sequelize.BIGINT,
         primaryKey: true,
-        type: Sequelize.INTEGER
-      },
-      id: {
-        type: Sequelize.BIGINT
+        autoIncrement: true,
       },
       name: {
         type: Sequelize.STRING
       },
       img: {
-        type: Sequelize.BLOB
+        type: Sequelize.STRING
       },
       type: {
         type: Sequelize.ARRAY(Sequelize.STRING)
@@ -35,6 +32,10 @@ module.exports = {
       },
       base: {
         type: Sequelize.JSON
+      },
+      creatorId: {
+        type: Sequelize.BIGINT,
+        allowNull: true
       },
       createdAt: {
         allowNull: false,

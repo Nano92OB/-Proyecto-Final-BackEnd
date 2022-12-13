@@ -10,7 +10,10 @@ module.exports = {
         type: Sequelize.STRING
       },
       id: {
-        type: Sequelize.BIGINT
+        type: Sequelize.BIGINT,
+        primaryKey: true,
+        allowNull: false,
+        autoIncrement: true
       },
       createdAt: {
         allowNull: false,

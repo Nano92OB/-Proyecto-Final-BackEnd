@@ -205,7 +205,30 @@ module.exports = {
        }),
        createdAt: new Date(),
        updatedAt: new Date()
-      }
+      },
+     {
+       id: 10,
+       name: "Aron",
+       weight: 60.0,
+       height: 0.4,
+       moves: ["Sturdy", "Rock-Head"],
+       description: "It eats iron ore - and sometimes railroad tracks - to build up the steel armor that protects its body.",
+       type: [
+         "Steel",
+         "Rock"
+       ],
+       base: JSON.stringify({
+         "HP": 50,
+         "Attack": 70,
+         "Defense": 100,
+         "Spa": 40,
+         "Spd": 40,
+         "Speed": 30
+       }),
+       creatorId:1,
+       createdAt: new Date(),
+       updatedAt: new Date()
+     }
    ],{})
   },
 

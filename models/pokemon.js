@@ -21,13 +21,14 @@ module.exports = (sequelize, DataTypes) => {
       autoIncrement: true,
     },
     name: DataTypes.STRING,
-    img: DataTypes.BLOB,
+    img: DataTypes.STRING,
     type: DataTypes.ARRAY(DataTypes.STRING),
     weight: DataTypes.FLOAT,
     height: DataTypes.FLOAT,
     moves: DataTypes.ARRAY(DataTypes.STRING),
     description: DataTypes.TEXT,
     base: DataTypes.JSON,
+    creatorId: DataTypes.BIGINT,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
   }, {
