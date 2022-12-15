@@ -33,6 +33,17 @@ router.get('/getPokemons', async(req,res)=>{
     )}
 })
 
+router.post('/addNew', async (req, res) => {
+    const pok = db.Pokemon
+    const token = req.header('Authentication')
+    const newPokemon = req.body
+    newPokemon.creatorId = parseInt(jwt.verify(token, process.env.TOKEN_SECRET).id)
+    console.log(newPokemon)
+    pok.create(newPokemon)
+    .then(data => res.status(200).send({message: 'pokemon added succesfully'}))
+    .catch(err => res.status(500).send({message: err.message}))
+})
+
 
 
 
