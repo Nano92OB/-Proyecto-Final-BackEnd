@@ -18,7 +18,6 @@ router.post('/login', async(req,res)=>{
        if(data){
             const user = data[0].dataValues
             const validPassword = await bcrypt.compare(userLogged.password, user.password)
-            console.log(validPassword)
             if (!validPassword) {
                res.status(401).send({message: 'Data is not valid'})
             } else {

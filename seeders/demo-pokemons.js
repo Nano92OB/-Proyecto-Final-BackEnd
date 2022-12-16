@@ -14,7 +14,7 @@ module.exports = {
     */
    await queryInterface.bulkInsert('Pokemons',[
      {
-       id: 1,
+       id: 201,
        name: "Bulbasaur",
        weight: 6.9,
        height: 0.7,
@@ -32,11 +32,12 @@ module.exports = {
          "Spd": 50,
          "Speed": 65
        }),
+       creatorId: 1,
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 2,
+       id: 202,
        name: "Charmander",
        weight: 8.5,
        height: 0.6,
@@ -53,11 +54,12 @@ module.exports = {
          "Spd": 65,
          "Speed": 45
        }),
+       creatorId: 1,
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 3,
+       id: 203,
        name: "Squirtle",
        weight: 9,
        height: 0.5,
@@ -74,11 +76,12 @@ module.exports = {
          "Spd": 64,
          "Speed": 43
        }),
+       creatorId: 1,
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 4,
+       id: 204,
        name: "Butterfree",
        weight: 32.0,
        height: 1.1,
@@ -96,11 +99,12 @@ module.exports = {
          "Spd": 80,
          "Speed": 70
        }),
+       creatorId: 1,
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 5,
+       id: 205,
        name: "Pikachu",
        weight: 6.0,
        height: 0.4,
@@ -117,11 +121,12 @@ module.exports = {
          "Spd": 50,
          "Speed": 90
        }),
+       creatorId: 1,
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 6,
+       id: 206,
        name: "Gastly",
        weight: 0.1,
        height: 1.3,
@@ -139,11 +144,12 @@ module.exports = {
          "Spd": 35,
          "Speed": 80
        }),
+       creatorId: 1,
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 7,
+       id: 207,
        name: "Ditto",
        weight: 4.0,
        height: 0.3,
@@ -160,11 +166,12 @@ module.exports = {
          "Spd": 48,
          "Speed": 48
        }),
+       creatorId: 1,
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 8,
+       id: 208,
        name: "Mew",
        weight: 4.0,
        height: 0.4,
@@ -181,11 +188,12 @@ module.exports = {
          "Spd": 100,
          "Speed": 100
        }),
+       creatorId: 1,
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 9,
+       id: 209,
        name: "Aron",
        weight: 60.0,
        height: 0.4,
@@ -203,11 +211,12 @@ module.exports = {
          "Spd": 40,
          "Speed": 30
        }),
+       creatorId: 1,
        createdAt: new Date(),
        updatedAt: new Date()
       },
      {
-       id: 10,
+       id: 2010,
        name: "Aron",
        weight: 60.0,
        height: 0.4,
