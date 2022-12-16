@@ -14,7 +14,7 @@ module.exports = {
     */
    await queryInterface.bulkInsert('Pokemons',[
      {
-       id: 201,
+       id: 1,
        name: "Bulbasaur",
        weight: 6.9,
        height: 0.7,
@@ -32,12 +32,12 @@ module.exports = {
          "Spd": 50,
          "Speed": 65
        }),
-       creatorId: 1,
+       
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 202,
+       id: 2,
        name: "Charmander",
        weight: 8.5,
        height: 0.6,
@@ -54,12 +54,12 @@ module.exports = {
          "Spd": 65,
          "Speed": 45
        }),
-       creatorId: 1,
+       
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 203,
+       id: 3,
        name: "Squirtle",
        weight: 9,
        height: 0.5,
@@ -76,12 +76,12 @@ module.exports = {
          "Spd": 64,
          "Speed": 43
        }),
-       creatorId: 1,
+       
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 204,
+       id: 4,
        name: "Butterfree",
        weight: 32.0,
        height: 1.1,
@@ -99,12 +99,12 @@ module.exports = {
          "Spd": 80,
          "Speed": 70
        }),
-       creatorId: 1,
+       
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 205,
+       id: 5,
        name: "Pikachu",
        weight: 6.0,
        height: 0.4,
@@ -121,12 +121,12 @@ module.exports = {
          "Spd": 50,
          "Speed": 90
        }),
-       creatorId: 1,
+       
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 206,
+       id: 6,
        name: "Gastly",
        weight: 0.1,
        height: 1.3,
@@ -144,12 +144,12 @@ module.exports = {
          "Spd": 35,
          "Speed": 80
        }),
-       creatorId: 1,
+       
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 207,
+       id: 7,
        name: "Ditto",
        weight: 4.0,
        height: 0.3,
@@ -166,12 +166,12 @@ module.exports = {
          "Spd": 48,
          "Speed": 48
        }),
-       creatorId: 1,
+       
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 208,
+       id: 8,
        name: "Mew",
        weight: 4.0,
        height: 0.4,
@@ -188,12 +188,12 @@ module.exports = {
          "Spd": 100,
          "Speed": 100
        }),
-       creatorId: 1,
+       
        createdAt: new Date(),
        updatedAt: new Date()
      },
      {
-       id: 209,
+       id: 9,
        name: "Aron",
        weight: 60.0,
        height: 0.4,
@@ -211,33 +211,10 @@ module.exports = {
          "Spd": 40,
          "Speed": 30
        }),
-       creatorId: 1,
+       
        createdAt: new Date(),
        updatedAt: new Date()
       },
-     {
-       id: 2010,
-       name: "Aron",
-       weight: 60.0,
-       height: 0.4,
-       moves: ["Sturdy", "Rock-Head"],
-       description: "It eats iron ore - and sometimes railroad tracks - to build up the steel armor that protects its body.",
-       type: [
-         "Steel",
-         "Rock"
-       ],
-       base: JSON.stringify({
-         "HP": 50,
-         "Attack": 70,
-         "Defense": 100,
-         "Spa": 40,
-         "Spd": 40,
-         "Speed": 30
-       }),
-       creatorId:1,
-       createdAt: new Date(),
-       updatedAt: new Date()
-     }
    ],{})
   },
 
