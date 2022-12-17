@@ -214,7 +214,7 @@ module.exports = {
        creatorId: null,
        createdAt: new Date(),
        updatedAt: new Date()
-      }
+     }
    ],{})
   },
 
