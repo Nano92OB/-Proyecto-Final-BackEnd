@@ -14,7 +14,6 @@ module.exports = {
     */
    await queryInterface.bulkInsert('Pokemons',[
      {
-       id: 1,
        img: "/Sprites/Icons/bulbasaur.png",
        name: "Bulbasaur",
        weight: 6.9,
@@ -38,7 +37,6 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-       id: 2,
        img: "/Sprites/Icons/charmander.png",
        name: "Charmander",
        weight: 8.5,
@@ -61,7 +59,6 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-       id: 3,
        img: "/Sprites/Icons/squirtle.png",
        name: "Squirtle",
        weight: 9,
@@ -84,7 +81,6 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-       id: 4,
        img: "/Sprites/Icons/butterfree.png",
        name: "Butterfree",
        weight: 32.0,
@@ -108,7 +104,6 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-       id: 5,
        img: "/Sprites/Icons/pikachu.png",
        name: "Pikachu",
        weight: 6.0,
@@ -131,7 +126,6 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-       id: 6,
        img: "/Sprites/Icons/gastly.png",
        name: "Gastly",
        weight: 0.1,
@@ -155,7 +149,6 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-       id: 7,
        img: "/Sprites/Icons/ditto.png",
        name: "Ditto",
        weight: 4.0,
@@ -178,7 +171,6 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-       id: 8,
        img: "/Sprites/Icons/mew.png",
        name: "Mew",
        weight: 4.0,
@@ -201,7 +193,6 @@ module.exports = {
        updatedAt: new Date()
      },
      {
-       id: 9,
        img: "/Sprites/Icons/aron.png",
        name: "Aron",
        weight: 60.0,

@@ -61,17 +61,17 @@ router.get("/:id", async (req, res) => {
     .catch((err) => res.status(500).send({ message: err.message }));
 });
 
-router.delete("/dltPokemon", async (req, res) => {
-  let pok = db.pokemon;
+router.delete("/dltPokemon/:id", (req, res) => {
+  const id = req.params.id
+  let pok = db.Pokemon
   const token = req.header("Authentication");
-  await pok
-    .destroy({
+  pok.destroy({
       where: {
         creatorId: parseInt(jwt.verify(token, process.env.TOKEN_SECRET).id),
-        id: req.params.id,
+        id: id
       },
     })
-    .then((data) => res.sendDate)
+    .then((data) => res.send({message: "Pokemon deleted successfully!"}))
     .catch((err) => res.status(500).send({ message: err.message }));
 });
 
