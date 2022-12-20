@@ -10,7 +10,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Pokemon.belongsToMany(models.Users, {through: 'PokeUser'})
     }
   }
   Pokemon.init({

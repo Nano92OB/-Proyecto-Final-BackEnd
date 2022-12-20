@@ -33,17 +33,24 @@ RESPONSE
 {
    success: true/false
 }
-POST('/addPokemon') : Este endpoint nos permite agregar un nuevo pokemon a la aplicacion, una vez el usuario haya ingresado.
+
+POST('/addNew') : Este endpoint nos permite agregar un nuevo pokemon a la aplicacion, una vez el usuario haya ingresado.
 RESPONSE
 {
  'message': 'Pokemon has been added successfully'
 }
 
 
-GET('/getPokemons/:ID') : Este endpoint nos devuelve un pokemon por su ID.
+GET('/getSpecific/:id') : Este endpoint nos devuelve un pokemon por su ID.
 RESPONSE
 {
     "id"
+}
+
+DELETE('/dltPokemon/:id') : Este endpoint nos permite como ususario eliminar un pokemon creado.
+RESPONSE
+{
+    'message' : Pokemon deleted successfully!
 }
 
 

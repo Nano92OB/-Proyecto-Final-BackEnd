@@ -4,6 +4,7 @@ const { DataTypes, Sequelize } = require("sequelize");
 const router = express.Router();
 const db = require("../models/index");
 const jwt = require("jsonwebtoken");
+const defaultPoks = require('../data/defaultPokemons')
 
 router.get("/getPokemons", async (req, res) => {
   const pok = db.Pokemon;
@@ -24,7 +25,7 @@ router.get("/getPokemons", async (req, res) => {
   } else {
     await pok
       .findAll({
-        where: { creatorId: jwt.verify(token, process.env.TOKEN_SECRET).id },
+        where: { creatorId: jwt.verify(token, process.env.TOKEN_SECRET).id},
       })
       .then((data) => {
         res.send(data);
@@ -75,12 +76,14 @@ router.delete("/dltPokemon/:id", (req, res) => {
     .catch((err) => res.status(500).send({ message: err.message }));
 });
 
-router.get("/defaultPoks", (req, res)=>{
-  PokeUser.bulkcreate([{
-    PokemonId: 1,
-    UserId: 1
-  }])
-
+router.post("/defaultPoks", (req, res)=>{
+  const pok = db.Pokemon
+  const token = req.header("Authentication");
+  defaultPoks.forEach(poke => {
+    poke.creatorId = parseInt(jwt.verify(token, process.env.TOKEN_SECRET).id)
+    pok.create(poke)
+  })
+  res.status(200).send({message:'Default Pokemons added succesfully!'});
 })
 
 module.exports = router;

@@ -9,8 +9,6 @@ const {verifyToken} = require('./middlewares/tokenValidation');
 
 app.use(cors())
 app.use(express.json())
-
-
 app.use('/auth',login)
 app.use('/pokedex',pokemons)
 
