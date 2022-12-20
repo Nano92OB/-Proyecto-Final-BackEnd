@@ -48,9 +48,9 @@ router.post("/addNew", async (req, res) => {
     .catch((err) => res.status(500).send({ message: err.message }));
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/getSpecific/:id", async (req, res) => {
   let id = req.params.id;
-  let pok = db.pokemon;
+  let pok = db.Pokemon;
   await pok
     .findAll({
       where: {
@@ -74,5 +74,13 @@ router.delete("/dltPokemon/:id", (req, res) => {
     .then((data) => res.send({message: "Pokemon deleted successfully!"}))
     .catch((err) => res.status(500).send({ message: err.message }));
 });
+
+router.get("/defaultPoks", (req, res)=>{
+  PokeUser.bulkcreate([{
+    PokemonId: 1,
+    UserId: 1
+  }])
+
+})
 
 module.exports = router;

@@ -6,7 +6,6 @@ GET('/getPokemons') : Este endpoint devuelve la lista de pokemons
     [
         {
                 "id",
-                "number",
                 "img",
                 "name",
                 "weight",
