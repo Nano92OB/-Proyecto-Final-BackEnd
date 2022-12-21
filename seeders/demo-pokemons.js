@@ -32,7 +32,7 @@ module.exports = {
          "Spd": 50,
          "Speed": 65
        }),
-       creatorId: null,
+       userID: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -54,7 +54,7 @@ module.exports = {
          "Spd": 65,
          "Speed": 45
        }),
-       creatorId: null,
+       userID: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -76,7 +76,7 @@ module.exports = {
          "Spd": 64,
          "Speed": 43
        }),
-       creatorId: null,
+       userID: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -99,7 +99,7 @@ module.exports = {
          "Spd": 80,
          "Speed": 70
        }),
-       creatorId: null,
+       userID: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -121,7 +121,7 @@ module.exports = {
          "Spd": 50,
          "Speed": 90
        }),
-       creatorId: null,
+       userID: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -144,7 +144,7 @@ module.exports = {
          "Spd": 35,
          "Speed": 80
        }),
-       creatorId: null,
+       userID: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -166,7 +166,7 @@ module.exports = {
          "Spd": 48,
          "Speed": 48
        }),
-       creatorId: null,
+       userID: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -188,7 +188,7 @@ module.exports = {
          "Spd": 100,
          "Speed": 100
        }),
-       creatorId: null,
+       userID: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -211,7 +211,7 @@ module.exports = {
          "Spd": 40,
          "Speed": 30
        }),
-       creatorId: null,
+       userID: null,
        createdAt: new Date(),
        updatedAt: new Date()
      }
