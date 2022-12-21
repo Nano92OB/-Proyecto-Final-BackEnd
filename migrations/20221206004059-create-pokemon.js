@@ -33,7 +33,7 @@ module.exports = {
       base: {
         type: Sequelize.JSON
       },
-      creatorId: {
+      userId: {
         type: Sequelize.BIGINT,
         allowNull: true
       },

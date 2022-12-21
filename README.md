@@ -1,7 +1,9 @@
 #Proyecto-Final
 ****
+Servidor corriendo en puerto 8080
 
-GET('/getPokemons') : Este endpoint devuelve la lista de pokemons
+** Rutas públicas **
+GET('/pokedex/getPokemons') : Este endpoint devuelve la lista de pokemons
     RESPONSE
     [
         {
@@ -13,46 +15,52 @@ GET('/getPokemons') : Este endpoint devuelve la lista de pokemons
                 "moves": [],
                 "description",
                 "type": [],
+                "userId":
                 "base": {
-                "HP",
-                "Attack",
-                "Defense",
-                "Spa",
-                "Spd",
-                "Speed"
-                        }
+                            "HP",
+                            "Attack",
+                            "Defense",
+                            "Spa",
+                            "Spd",
+                            "Speed"
+                }
         },
 		
 {
 	...
 }]
 
-    
-POST('/Login') : Este endpoint permite autenticar el usuario que intenta ingresar a la aplicacion.
-RESPONSE
-{
-   success: true/false
-}
-
-POST('/addNew') : Este endpoint nos permite agregar un nuevo pokemon a la aplicacion, una vez el usuario haya ingresado.
-RESPONSE
-{
- 'message': 'Pokemon has been added successfully'
-}
-
-
 GET('/getSpecific/:id') : Este endpoint nos devuelve un pokemon por su ID.
 RESPONSE
 {
     "id"
 }
+    
+POST('/auth/Login') : Este endpoint permite autenticar el usuario que intenta ingresar a la aplicacion.
+RESPONSE
+{
+   success: true/false
+}
 
-DELETE('/dltPokemon/:id') : Este endpoint nos permite como ususario eliminar un pokemon creado.
+
+
+** Rutas Protegidas por Middleware **
+POST('/pf/addNew') : Este endpoint nos permite agregar un nuevo pokemon a la aplicacion, una vez el usuario haya ingresado.
+RESPONSE
+{
+ 'message': 'Pokemon has been added successfully'
+}
+
+DELETE('/pf/dltPokemon/:id') : Este endpoint nos permite como ususario eliminar un pokemon creado.
 RESPONSE
 {
     'message' : Pokemon deleted successfully!
 }
 
+POST('/pf/defaultPoks') : Este endpoint nos permite añadir pokemones por defecto a la pokedex del usuario logueado.
+{
+    message: 'Default Pokemons added succesfully!'
+}
 
 
 
