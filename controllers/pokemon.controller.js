@@ -12,7 +12,7 @@ router.get("/getPokemons", async (req, res) => {
     await pok
       .findAll({
         where: {
-          creatorId: null,
+          userId: null,
         },
       })
       .then((data) => {
@@ -24,7 +24,7 @@ router.get("/getPokemons", async (req, res) => {
   } else {
     await pok
       .findAll({
-        where: { creatorId: jwt.verify(token, process.env.TOKEN_SECRET).id},
+        where: { userId: jwt.verify(token, process.env.TOKEN_SECRET).id},
       })
       .then((data) => {
         res.send(data);

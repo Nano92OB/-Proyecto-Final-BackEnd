@@ -10,7 +10,7 @@ router.post("/addNew", async (req, res) => {
     const pok = db.Pokemon;
     const token = req.header("Authentication");
     const newPokemon = req.body;
-    newPokemon.creatorId = parseInt(
+    newPokemon.userId = parseInt(
         jwt.verify(token, process.env.TOKEN_SECRET).id
     );
     pok
@@ -27,7 +27,7 @@ router.delete("/dltPokemon/:id", (req, res) => {
     const token = req.header("Authentication");
     pok.destroy({
         where: {
-            creatorId: parseInt(jwt.verify(token, process.env.TOKEN_SECRET).id),
+            userId: parseInt(jwt.verify(token, process.env.TOKEN_SECRET).id),
             id: id
         },
     })
@@ -39,7 +39,7 @@ router.post("/defaultPoks", (req, res) => {
     const pok = db.Pokemon
     const token = req.header("Authentication");
     defaultPoks.forEach(poke => {
-        poke.creatorId = parseInt(jwt.verify(token, process.env.TOKEN_SECRET).id)
+        poke.userId = parseInt(jwt.verify(token, process.env.TOKEN_SECRET).id)
         pok.create(poke)
     })
     res.status(200).send({message: 'Default Pokemons added succesfully!'});
