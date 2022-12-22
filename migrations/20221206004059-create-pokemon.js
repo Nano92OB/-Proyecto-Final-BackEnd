@@ -37,6 +37,9 @@ module.exports = {
         type: Sequelize.BIGINT,
         allowNull: true
       },
+      isDefault: {
+        type: Sequelize.BOOLEAN
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

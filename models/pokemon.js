@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.TEXT,
     base: DataTypes.JSON,
     userId: DataTypes.BIGINT,
+    isDefault: DataTypes.BOOLEAN,
     createdAt: DataTypes.DATE,
     updatedAt: DataTypes.DATE
   }, {

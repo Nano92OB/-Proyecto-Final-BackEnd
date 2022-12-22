@@ -33,6 +33,7 @@ module.exports = {
          "Speed": 65
        }),
        userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -55,6 +56,7 @@ module.exports = {
          "Speed": 45
        }),
        userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -77,6 +79,7 @@ module.exports = {
          "Speed": 43
        }),
        userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -100,6 +103,7 @@ module.exports = {
          "Speed": 70
        }),
        userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -122,6 +126,7 @@ module.exports = {
          "Speed": 90
        }),
        userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -145,6 +150,7 @@ module.exports = {
          "Speed": 80
        }),
        userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -167,6 +173,7 @@ module.exports = {
          "Speed": 48
        }),
        userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -189,6 +196,7 @@ module.exports = {
          "Speed": 100
        }),
        userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -212,6 +220,7 @@ module.exports = {
          "Speed": 30
        }),
        userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      }

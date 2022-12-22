@@ -17,7 +17,8 @@
          "Spd": 50,
          "Speed": 65
        }),
-       creatorId: null,
+       userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -39,7 +40,8 @@
          "Spd": 65,
          "Speed": 45
        }),
-       creatorId: null,
+       userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -61,7 +63,8 @@
          "Spd": 64,
          "Speed": 43
        }),
-       creatorId: null,
+       userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -84,7 +87,8 @@
          "Spd": 80,
          "Speed": 70
        }),
-       creatorId: null,
+       userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -106,7 +110,8 @@
          "Spd": 50,
          "Speed": 90
        }),
-       creatorId: null,
+       userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -129,7 +134,8 @@
          "Spd": 35,
          "Speed": 80
        }),
-       creatorId: null,
+       userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -151,7 +157,8 @@
          "Spd": 48,
          "Speed": 48
        }),
-       creatorId: null,
+       userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -173,7 +180,8 @@
          "Spd": 100,
          "Speed": 100
        }),
-       creatorId: null,
+       userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      },
@@ -196,7 +204,8 @@
          "Spd": 40,
          "Speed": 30
        }),
-       creatorId: null,
+       userId: null,
+       isDefault: null,
        createdAt: new Date(),
        updatedAt: new Date()
      }

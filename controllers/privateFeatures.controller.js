@@ -35,14 +35,33 @@ router.delete("/dltPokemon/:id", (req, res) => {
         .catch((err) => res.status(500).send({message: err.message}));
 });
 
-router.post("/defaultPoks", (req, res) => {
+router.post("/defaultPoks", async (req, res) => {
     const pok = db.Pokemon
     const token = req.header("Authentication");
-    defaultPoks.forEach(poke => {
-        poke.userId = parseInt(jwt.verify(token, process.env.TOKEN_SECRET).id)
-        pok.create(poke)
+    let arePoks = []
+    await pok.findAll(
+        {
+            where: {
+                userId: parseInt(jwt.verify(token, process.env.TOKEN_SECRET).id),
+                isDefault: true
+            }
+        }
+    )
+    .then((data)=> {
+        arePoks.push(data)    
     })
-    res.status(200).send({message: 'Default Pokemons added succesfully!'});
+    
+    if(arePoks[0].length === 0){
+        defaultPoks.forEach(poke => {
+            poke.userId = parseInt(jwt.verify(token, process.env.TOKEN_SECRET).id)
+            poke.isDefault = true
+            pok.create(poke)
+        })
+        res.status(200).send({message: 'Default Pokemons added succesfully!'});
+    }
+    else{
+        res.status(400).send({message: 'Default Pokemons have been already added!'})
+    }
 })
 
 module.exports = router
