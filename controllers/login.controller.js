@@ -7,7 +7,6 @@ const db = require('../models/index')
 router.post('/login', async(req,res)=>{
     const Users = db.Users
     const userLogged = req.body
-    console.log(userLogged)
     Users.findAll({
                 where:{
                     username: userLogged.username
@@ -31,8 +30,5 @@ router.post('/login', async(req,res)=>{
     })
     .catch(err=>{res.status(500).send({message: err.message})})
 })
-
-
-
 
 module.exports = router

@@ -1,21 +1,32 @@
 #Proyecto-Final
 ****
+
 Servidor corriendo en puerto 8080
+Configuracion de base de datos desde variables de entorno. En archivo '.env.example.txt'
+
+** Scripts Disponibles **
+Para iniciliazar el backend:
+    npm i
+    npx sequelize-cli db:migrate
+    npx sequelize-cli db:seed:all
+    nodemon app.js
+
 
 ** Rutas públicas **
 GET('/pokedex/getPokemons') : Este endpoint devuelve la lista de pokemons
     RESPONSE
     [
         {
-                "id",
-                "img",
-                "name",
-                "weight",
-                "height",
+                "id":,
+                "img":,
+                "name":,
+                "weight":,
+                "height":,
                 "moves": [],
                 "description",
                 "type": [],
                 "userId":
+                "isDefault":
                 "base": {
                             "HP",
                             "Attack",
@@ -33,7 +44,26 @@ GET('/pokedex/getPokemons') : Este endpoint devuelve la lista de pokemons
 GET('/getSpecific/:id') : Este endpoint nos devuelve un pokemon por su ID.
 RESPONSE
 {
-    "id"
+    {
+                "id":,
+                "img":,
+                "name":,
+                "weight":,
+                "height":,
+                "moves": [],
+                "description",
+                "type": [],
+                "userId":
+                "isDefault":
+                "base": {
+                            "HP",
+                            "Attack",
+                            "Defense",
+                            "Spa",
+                            "Spd",
+                            "Speed"
+                }
+        },
 }
     
 POST('/auth/Login') : Este endpoint permite autenticar el usuario que intenta ingresar a la aplicacion.
@@ -51,7 +81,7 @@ RESPONSE
  'message': 'Pokemon has been added successfully'
 }
 
-DELETE('/pf/dltPokemon/:id') : Este endpoint nos permite como ususario eliminar un pokemon creado.
+DELETE('/pf/dltPokemon/:id') : Este endpoint nos permite como usuario eliminar un pokemon creado.
 RESPONSE
 {
     'message' : Pokemon deleted successfully!
