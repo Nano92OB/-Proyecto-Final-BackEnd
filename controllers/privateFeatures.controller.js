@@ -62,6 +62,7 @@ router.post("/defaultPoks", async (req, res) => {
     else{
         res.status(400).send({message: 'Default Pokemons have been already added!'})
     }
+    
 })
 
 module.exports = router

@@ -9,14 +9,14 @@
          "Grass",
          "Poison"
        ],
-       base: JSON.stringify({
+       base: {
          "HP": 39,
          "Attack": 52,
          "Defense": 43,
          "Spa": 60,
          "Spd": 50,
          "Speed": 65
-       }),
+       },
        userId: null,
        isDefault: null,
        createdAt: new Date(),
@@ -32,14 +32,14 @@
        type: [
          "Fire"
        ],
-       base: JSON.stringify({
+       base: {
          "HP": 45,
          "Attack": 49,
          "Defense": 49,
          "Spa": 65,
          "Spd": 65,
          "Speed": 45
-       }),
+       },
        userId: null,
        isDefault: null,
        createdAt: new Date(),
@@ -55,14 +55,14 @@
        type: [
          "Water"
        ],
-       base: JSON.stringify({
+       base: {
          "HP": 44,
          "Attack": 48,
          "Defense": 65,
          "Spa": 50,
          "Spd": 64,
          "Speed": 43
-       }),
+       },
        userId: null,
        isDefault: null,
        createdAt: new Date(),
@@ -79,14 +79,14 @@
          "Bug",
          "Flying"
        ],
-       base: JSON.stringify({
+       base: {
          "HP": 60,
          "Attack": 45,
          "Defense": 50,
          "Spa": 90,
          "Spd": 80,
          "Speed": 70
-       }),
+       },
        userId: null,
        isDefault: null,
        createdAt: new Date(),
@@ -102,14 +102,14 @@
        type: [
          "Electric"
        ],
-       base: JSON.stringify({
+       base: {
          "HP": 35,
          "Attack": 55,
          "Defense": 40,
          "Spa": 50,
          "Spd": 50,
          "Speed": 90
-       }),
+       },
        userId: null,
        isDefault: null,
        createdAt: new Date(),
@@ -126,14 +126,14 @@
          "Ghost",
          "Poison"
        ],
-       base: JSON.stringify({
+       base: {
          "HP": 30,
          "Attack": 35,
          "Defense": 30,
          "Spa": 100,
          "Spd": 35,
          "Speed": 80
-       }),
+       },
        userId: null,
        isDefault: null,
        createdAt: new Date(),
@@ -149,14 +149,14 @@
        type: [
          "Normal"
        ],
-       base: JSON.stringify({
+       base: {
          "HP": 48,
          "Attack": 48,
          "Defense": 48,
          "Spa": 48,
          "Spd": 48,
          "Speed": 48
-       }),
+       },
        userId: null,
        isDefault: null,
        createdAt: new Date(),
@@ -172,14 +172,14 @@
        type: [
          "Psychic"
        ],
-       base: JSON.stringify({
+       base: {
          "HP": 100,
          "Attack": 100,
          "Defense": 100,
          "Spa": 100,
          "Spd": 100,
          "Speed": 100
-       }),
+       },
        userId: null,
        isDefault: null,
        createdAt: new Date(),
@@ -196,14 +196,14 @@
          "Steel",
          "Rock"
        ],
-       base: JSON.stringify({
+       base: {
          "HP": 50,
          "Attack": 70,
          "Defense": 100,
          "Spa": 40,
          "Spd": 40,
          "Speed": 30
-       }),
+       },
        userId: null,
        isDefault: null,
        createdAt: new Date(),
